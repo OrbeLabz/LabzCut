@@ -1,3 +1,5 @@
+> **LabzCut** é um fork do Concat mantido pela OrbeLabz, com nome, ícone e cores próprios. O que mudou e a licença estão em [LABZCUT.md](LABZCUT.md). O texto abaixo é o README original do Concat.
+
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/jub0t/Concat@main/assets/concat-mark-dark.png" alt="Concat" width="100" />
 </p>

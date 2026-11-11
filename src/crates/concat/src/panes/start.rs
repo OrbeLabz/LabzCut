@@ -95,7 +95,7 @@ pub fn shown<'a>(
 /// The official site, which the guides and the developer docs are pages of.
 const SITE: &str = "https://concat.standalones.org";
 /// The repository: the code, the issues, the releases.
-pub const REPOSITORY: &str = "https://github.com/jub0t/Concat";
+pub const REPOSITORY: &str = "https://github.com/OrbeLabz/LabzCut";
 
 /// Where each of the launch screen's links goes, by the name the screen
 /// sends. One table, so a moved page is one line here. Every address is a
@@ -205,7 +205,7 @@ fn location_on(os: &str, desktop: Option<PathBuf>, home: impl Fn(&str) -> String
         "android" => home("Concat"),
         "ios" => home("Documents/Concat"),
         _ => desktop
-            .map(|desktop| desktop.join("Concat").to_string_lossy().into_owned())
+            .map(|desktop| desktop.join("LabzCut").to_string_lossy().into_owned())
             .unwrap_or_else(|| home("Desktop/Concat")),
     }
 }
@@ -570,7 +570,7 @@ mod tests {
         assert_eq!(location_on("android", None, home), "/home/Concat");
         assert_eq!(
             PathBuf::from(location_on("macos", desktop(), home)),
-            Path::new("/desk").join("Concat")
+            Path::new("/desk").join("LabzCut")
         );
         assert_eq!(location_on("linux", None, home), "/home/Desktop/Concat");
     }

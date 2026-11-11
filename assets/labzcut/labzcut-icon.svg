@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- LabzCut: tesoura cortando uma fita de filme. OrbeLabz, 2026. -->
+  <defs>
+    <linearGradient id="fundo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16203A"/>
+      <stop offset="1" stop-color="#0B0F19"/>
+    </linearGradient>
+    <linearGradient id="fita" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="lamina" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#00F2FE"/>
+      <stop offset="1" stop-color="#E9FEFF"/>
+    </linearGradient>
+    <linearGradient id="borda" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00F2FE" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity=".35"/>
+    </linearGradient>
+    <clipPath id="quadro"><rect x="16" y="16" width="480" height="480" rx="112"/></clipPath>
+    <g id="pedaco">
+      <rect x="0" y="0" width="230" height="112" fill="url(#fita)"/>
+      <g fill="#0B0F19">
+        <rect x="12" y="10" width="20" height="16" rx="4"/><rect x="52" y="10" width="20" height="16" rx="4"/>
+        <rect x="92" y="10" width="20" height="16" rx="4"/><rect x="132" y="10" width="20" height="16" rx="4"/>
+        <rect x="172" y="10" width="20" height="16" rx="4"/>
+        <rect x="12" y="86" width="20" height="16" rx="4"/><rect x="52" y="86" width="20" height="16" rx="4"/>
+        <rect x="92" y="86" width="20" height="16" rx="4"/><rect x="132" y="86" width="20" height="16" rx="4"/>
+        <rect x="172" y="86" width="20" height="16" rx="4"/>
+      </g>
+      <g fill="#0E1B3D" opacity=".85">
+        <rect x="10" y="34" width="66" height="44" rx="6"/>
+        <rect x="88" y="34" width="66" height="44" rx="6"/>
+        <rect x="166" y="34" width="66" height="44" rx="6"/>
+      </g>
+    </g>
+  </defs>
+
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#fundo)"/>
+  <g clip-path="url(#quadro)">
+    <g transform="rotate(-16 256 256)">
+      <!-- fita cortada em duas partes -->
+      <use href="#pedaco" transform="translate(14 172)"/>
+      <use href="#pedaco" transform="translate(270 170) rotate(2 0 56)"/>
+      <!-- tesoura: lâminas abertas em V, a fita passa no encontro -->
+      <g>
+        <path d="M232 322 Q238 296 252 286 L194 50 Q190 38 200 44 Q236 150 280 300 Q270 318 256 326 Z" fill="url(#lamina)"/>
+        <path d="M280 322 Q274 296 260 286 L318 50 Q322 38 312 44 Q276 150 232 300 Q242 318 256 326 Z" fill="url(#lamina)" opacity=".9"/>
+        <path d="M256 318 L214 384" stroke="#00F2FE" stroke-width="24" stroke-linecap="round"/>
+        <path d="M256 318 L298 384" stroke="#00F2FE" stroke-width="24" stroke-linecap="round"/>
+        <circle cx="198" cy="422" r="44" fill="none" stroke="#00F2FE" stroke-width="24"/>
+        <circle cx="314" cy="422" r="44" fill="none" stroke="#00F2FE" stroke-width="24"/>
+        <circle cx="256" cy="310" r="15" fill="#0B0F19"/>
+        <circle cx="256" cy="310" r="8" fill="#E9FEFF"/>
+      </g>
+    </g>
+  </g>
+  <rect x="17.5" y="17.5" width="477" height="477" rx="110.5" fill="none" stroke="url(#borda)" stroke-width="3"/>
+</svg>

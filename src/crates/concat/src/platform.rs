@@ -556,7 +556,7 @@ pub fn select_backend(
     // or a task switcher files the running window under the launcher it
     // came from - its icon, its pin - rather than as an unknown app. Slint
     // ignores it off Linux and the BSDs.
-    let _ = slint::set_xdg_app_id("concat");
+    let _ = slint::set_xdg_app_id("labzcut");
     Ok(gpu)
 }
 
@@ -569,13 +569,13 @@ pub fn select_backend(
 pub fn report_startup_failure(error: &str) {
     #[cfg(not(any(target_os = "android", target_os = "ios")))]
     {
-        let mut description = format!("Concat could not start.\n\n{error}");
+        let mut description = format!("LabzCut could not start.\n\n{error}");
         if let Some(path) = concat_host::logs::current() {
             description.push_str(&format!("\n\nLog: {}", path.display()));
         }
         rfd::MessageDialog::new()
             .set_level(rfd::MessageLevel::Error)
-            .set_title("Concat")
+            .set_title("LabzCut")
             .set_description(description)
             .set_buttons(rfd::MessageButtons::Ok)
             .show();

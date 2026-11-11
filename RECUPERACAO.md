@@ -3,7 +3,7 @@ tipo: dossie-recuperacao
 resumo: LabzCut, fork do editor de vídeo Concat v0.2.9 com nome, ícone e cores da OrbeLabz; compilado no PC, sem repositório remoto ainda.
 data: 2026-11-10
 projeto: LabzCut
-status: ativo
+status: concluído
 origem: Pedido de John em 10/11/2026 ("desmonte todo esse aplicativo para recriar um clone dele chamado LabzCut com as cores da orbelabz"); regra de preservação aprovada em 29/10/2026.
 ---
 # Recuperação: LabzCut
@@ -12,7 +12,7 @@ origem: Pedido de John em 10/11/2026 ("desmonte todo esse aplicativo para recria
 - Nome: `LabzCut`. Objetivo: editor de vídeo local da OrbeLabz (alternativa ao CapCut), sem conta, sem marca d'água.
 - Origem: fork do [Concat](https://github.com/jub0t/Concat), AGPL-3.0-or-later, tag `v0.2.9`, commit `784021e7`. Detalhes e licença: [LABZCUT.md](LABZCUT.md).
 - Responsável: Claude, a pedido de John (10/11/2026).
-- Pasta física: `E:\Brain\OrbeLabz\Projetos\Em desenvolvimento\LabzCut` (Git próprio, branch `labzcut`, remoto `upstream` = jub0t/Concat).
+- Pasta física: `E:\Brain\OrbeLabz\Projetos\Concluídos\LabzCut` (Git próprio, branch `labzcut`, remoto `upstream` = jub0t/Concat).
 - Instalador recebido de John: `C:\Users\JohnD\Downloads\Concat-0.2.9-windows-x86_64-setup.exe`, SHA-256 `bc3e994a592d46c9dce037bf0b41e329de7b3821c25bc27717a8e0d5d34d1a0a`, sem assinatura digital. Não foi executado nem descompilado: o código-fonte oficial da mesma versão foi usado no lugar.
 
 ## Estado que deve ser recuperado

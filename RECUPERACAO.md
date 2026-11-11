@@ -21,7 +21,7 @@ origem: Pedido de John em 10/11/2026 ("desmonte todo esse aplicativo para recria
 | Código | Git local, branch `labzcut` | 10/11/2026 | Sem remoto da OrbeLabz: o fork público `OrbeLabz/LabzCut` aguarda OK de John |
 | Executável | `src/target/x86_64-pc-windows-msvc/app/labzcut.exe` (final) e `src/target/quick/labzcut.exe` (teste) | 10/11/2026 | Regenerável; o final leva ~37 min |
 | Instalador de distribuição (limpo) | `E:\Brain\Ferramentas\labzcut-build\stage\LabzCut-0.2.9-windows-x86_64-setup.exe`, 80,1 MB, SHA-256 `9ff4ca422fdcf56812fbd20362f554548e306a8189d4a18d82f68be4bac849e7` | 10/11/2026 | Sem assinatura digital (o SmartScreen avisa). Kaspersky (41 objetos) e Defender: zero detecção. Sem caminhos ou dados de John dentro |
-| Remoto | `github.com/OrbeLabz/LabzCut`, branch `labzcut` (padrão), público, Actions desligado | 10/11/2026 | Release `labzcut-v0.2.9` aguarda OK de John |
+| Remoto | `github.com/OrbeLabz/LabzCut`, branch `labzcut` (padrão), público, Actions desligado; Release `labzcut-v0.2.9` com o instalador (hash conferido no download) | 10/11/2026 | Página de download: orbelabz.com/ferramentas/labzcut/ |
 | Backup | `G:\Meu Drive\Projeto OrbeLabz\LabzCut.zip`, 95 MB, SHA-256 `6726d888…f2401c4`, sem `src/target*` | 10/11/2026 | Cópia na pasta do Drive conferida; envio à nuvem pelo Google Drive não verificado |
 | Dados do usuário | `%APPDATA%\com.orbelabz.labzcut` e `%LOCALAPPDATA%\com.orbelabz.labzcut` | não verificado | Separados das pastas do Concat |
 

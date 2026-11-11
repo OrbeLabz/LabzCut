@@ -44,6 +44,9 @@ Ficam em `E:\Brain\Ferramentas\labzcut-build`, baixadas por `baixar.sh` com SHA-
 - Tela inicial em pt-BR, com nome LabzCut, cores e versão certas, nas versões de teste e final empacotada (`assets/labzcut/tela-03-versao-final.png`).
 - O exe empacotado carrega todas as DLLs sem o PATH de compilação.
 
+## Instalação no PC de John
+- Desinstalado em 11/11/2026 a pedido de John (desinstalador do Inno Setup). Pastas de dados `com.orbelabz.labzcut`, `Desktop\LabzCut` (projeto "teste") e `E:\LabzCut-demo` foram para a Lixeira. Os prints do site continuam no tema.
+
 ## Lacunas
 - Editor testado: importar mídia, montar a linha do tempo e pôr título funcionam (prints em `E:\LabzCut-demo`). Instalador testado: instala por usuário em `%LOCALAPPDATA%\Programs\LabzCut` e abre.
 - Exportação e IA (legendas, recorte) continuam sem teste meu.

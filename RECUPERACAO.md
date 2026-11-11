@@ -19,7 +19,8 @@ origem: Pedido de John em 10/11/2026 ("desmonte todo esse aplicativo para recria
 | Camada | Local ou revisão | Data | Limites |
 |---|---|---|---|
 | Código | Git local, branch `labzcut` | 10/11/2026 | Sem remoto da OrbeLabz: o fork público `OrbeLabz/LabzCut` aguarda OK de John |
-| Executável | `src/target/<perfil>/labzcut.exe` | não verificado | Regenerável pela compilação abaixo |
+| Executável | `src/target/x86_64-pc-windows-msvc/app/labzcut.exe` (final) e `src/target/quick/labzcut.exe` (teste) | 10/11/2026 | Regenerável; o final leva ~37 min |
+| Instalador | `E:\Brain\Ferramentas\labzcut-build\stage\LabzCut-0.2.9-windows-x86_64-setup.exe`, SHA-256 `b8a86890d973a7ebed9be51a093100094b54aa642ffc6afb0f2fcbe64d2fbf01` | 10/11/2026 | Sem assinatura digital (o SmartScreen avisa); feito antes da correção do texto do `--version` |
 | Dados do usuário | `%APPDATA%\com.orbelabz.labzcut` e `%LOCALAPPDATA%\com.orbelabz.labzcut` | não verificado | Separados das pastas do Concat |
 
 ## Dependências de compilação (Windows)
@@ -32,10 +33,17 @@ Ficam em `E:\Brain\Ferramentas\labzcut-build`, baixadas por `baixar.sh` com SHA-
 ## Reconstrução do zero
 1. `git clone --branch v0.2.9 https://github.com/jub0t/Concat.git LabzCut` e reaplicar as mudanças do LabzCut (ou clonar o fork, quando existir).
 2. `bash E:\Brain\Ferramentas\labzcut-build\baixar.sh`, extrair os zips e instalar o LLVM em `llvm\` (`LLVM-21.1.0-win64.exe /S /D=...\llvm`).
-3. `E:\Brain\Ferramentas\labzcut-build\compilar.bat quick` (teste) ou `compilar.bat app` (versão final).
-4. Para rodar, `onnxruntime.dll` e as DLLs do FFmpeg precisam estar ao lado do `labzcut.exe` ou no PATH.
+3. `E:\Brain\Ferramentas\labzcut-build\compilar.bat quick` (teste, ~12 min na primeira vez) ou `compilar.bat app` (versão final, usa `--target x86_64-pc-windows-msvc`; sem ele o build script do ffmpeg-sys quebra com violação de acesso).
+4. `powershell -File E:\Brain\Ferramentas\labzcut-build\empacotar.ps1` monta a pasta em `stage\` e gera o instalador com o Inno Setup 6.7.4 (instalado em `innosetup\`).
+5. Para rodar, `onnxruntime.dll` e as DLLs do FFmpeg precisam estar ao lado do `labzcut.exe` ou no PATH.
+
+## Verificado em 10/11/2026
+- Tela inicial em pt-BR, com nome LabzCut, cores e versão certas, nas versões de teste e final empacotada (`assets/labzcut/tela-03-versao-final.png`).
+- O exe empacotado carrega todas as DLLs sem o PATH de compilação.
 
 ## Lacunas
+- Editor, timeline, exportação e IA (legendas, recorte) não foram testados por mim.
+- Instalador gerado, mas não instalado nem testado.
 - Sem cópia fora do PC. Sem teste de restauração.
 - Ícone: teste 02 (`assets/labzcut/teste-02.png`); vira padrão só quando John aprovar.
 - Android, iOS e macOS não foram adaptados nem testados.
